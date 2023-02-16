@@ -1,0 +1,13 @@
+https://github.com/bookcover961/SQL-10.git
+
+CREATE FUNCTION TEST_GET_AGE(@year INT)
+RETURNS INT
+AS
+BEGIN
+	DECLARE @AGE INT
+	SET @AGE = YEAR(GETDATE()) - @year
+	RETURN(@AGE)
+END
+GO
+
+SELECT dbo.TEST_GET_AGE(2000);
